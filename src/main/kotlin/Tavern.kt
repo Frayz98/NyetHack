@@ -7,8 +7,14 @@ fun main(args: Array<String>) {
     placeOrder("shandy,Dragon's Breath,5.91")
 }
 
-fun performPurchase() {
+fun performPurchase(price: Double) {
     displayBalance()
+    val totalPurse = playerGold + (playerSilver / 100.0)
+    println("Total purse: $totalPurse")
+    println("Purchasing item for $price ")
+
+    val remainingBalance = totalPurse - price
+    println("%.2f".format(remainingBalance))
 }
 
 private fun displayBalance() {
@@ -43,7 +49,7 @@ private fun placeOrder(menuData: String) {
     val message = "Madrigal buys a $name ($type) for $price"
     println(message)
 
-    performPurchase()
+    performPurchase(price.toDouble())
 
 //    val phrase = "Ah, delicious $name!"
 //    println("Madrigal exclaims: ${toDragonSpeak(phrase)}")
