@@ -1,3 +1,5 @@
+import kotlin.math.roundToInt
+
 const val TAVERN_NAME = "Taernyl's Folly"
 
 var playerGold = 10
@@ -15,6 +17,14 @@ fun performPurchase(price: Double) {
 
     val remainingBalance = totalPurse - price
     println("%.2f".format(remainingBalance))
+
+
+    val remainingGold = remainingBalance.toInt()
+    val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
+
+    playerGold = remainingGold
+    playerSilver = remainingSilver
+    displayBalance()
 }
 
 private fun displayBalance() {
@@ -22,7 +32,7 @@ private fun displayBalance() {
 }
 
 private fun toDragonSpeak(phrase: String) =
-    phrase.replace(Regex("[aeiou]")) {
+    phrase.replace(Regex("[aeiouAEIOU]")) {
         when (it.value) {
             "a" -> "4"
             "e" -> "3"
@@ -55,7 +65,7 @@ private fun placeOrder(menuData: String) {
 //    println("Madrigal exclaims: ${toDragonSpeak(phrase)}")
 
     val phrase = if (name == "Dragon's Breath") {
-        "Madrigal exclaims: ${toDragonSpeak("Ah, delicious $name!")}"
+        "Madrigal exclaims: ${toDragonSpeak("AH, DELICIOUS $name!")}"
     } else {
         "Madrigal says: Thanks for the $name"
     }

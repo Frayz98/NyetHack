@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1b31650-b428-4cb5-a47d-aea7bdd95f8a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Tavern.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Tavern.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +60,7 @@
       <workItem from="1661837156671" duration="1033000" />
       <workItem from="1661862555681" duration="68000" />
       <workItem from="1661940611718" duration="1302000" />
+      <workItem from="1662141515569" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="Update Tavern.kt">
       <created>1661862579881</created>
